@@ -19,5 +19,12 @@ export class NovaTransferenciaComponent implements OnInit {
     // console.log('Transferir ' + this.valor + ' para ' + this.destino);
     const valEmitir = {valor: this.valor, destino: this.destino};
     this.transferindoOut.emit(valEmitir); //propagar o valor
+
+    this.clearFields();
+  }
+
+  clearFields() {
+    this.destino = 0;
+    this.valor = this.destino;
   }
 }
