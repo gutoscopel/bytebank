@@ -10,13 +10,14 @@ export class AppComponent {
   // destino: number;
   // valor: number;
   // tranferencia: any {};
-  transferencia: any;
+  transferencias: any[] = [];
 
   transferir($event) {
     // console.log("Resultado:" + $event.valor + " " +$event.destino);
     // console.log($event)
     // this.valor= $event.valor;
     // this.destino= $event.destino;
-    this.transferencia = $event;
+    const transferencia = {...$event, data: new Date()};
+    this.transferencias.push(transferencia);
   }
 }
