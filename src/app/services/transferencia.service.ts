@@ -19,13 +19,14 @@ export class TransferenciaService {
     this._listaDeTransferencia = [];
   }
 
-  todas(): Observable<Transferencia[]>{
+  todas(): Observable<Transferencia[]> {
     return this.httpClient.get<Transferencia[]>(this._url);
   }
 
-  adicionar(transferencia: any) {
+  adicionar(transferencia: Transferencia): Observable<Transferencia> {
     this.hidratar(transferencia);
-    this._listaDeTransferencia.push(transferencia);
+    // this._listaDeTransferencia.push(transferencia);
+    return this.httpClient.post<Transferencia>(this._url, transferencia);
   }
 
   private hidratar(transferencia: any) {

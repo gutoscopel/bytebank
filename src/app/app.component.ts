@@ -15,13 +15,13 @@ export class AppComponent {
 
   constructor(private service: TransferenciaService) {}
 
-  transferir($event) {
-    // console.log("Resultado:" + $event.valor + " " +$event.destino);
-    // console.log($event)
-    // this.valor= $event.valor;
-    // // this.destino= $event.destino;
-    // const transferencia = { ...$event, data: new Date() };
-    // this.transferencias.push(transferencia);
-    this.service.adicionar($event);
-  }
+  // transferir($event) {
+  //   // console.log("Resultado:" + $event.valor + " " +$event.destino);
+  //   // console.log($event)
+  //   // this.valor= $event.valor;
+  //   // // this.destino= $event.destino;
+  //   // const transferencia = { ...$event, data: new Date() };
+  //   // this.transferencias.push(transferencia);
+  //   this.service.adicionar($event);
+  // }
 }
